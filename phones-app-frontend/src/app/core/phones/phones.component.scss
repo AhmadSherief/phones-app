@@ -1,0 +1,26 @@
+.container {
+  width: 50%;
+  justify-content: center;
+  margin: 3% auto;
+  table {
+    width: 100%;
+    .mat-column-country,
+    .mat-column-number,
+    .mat-column-code,
+    .mat-column-state {
+      width: 25%;
+    }
+  }
+  .center {
+    text-align: center;
+  }
+  .valid {
+    color: green;
+  }
+  .invalid {
+    color: red;
+  }
+  .countryFilter {
+    margin-right: 3%;
+  }
+}

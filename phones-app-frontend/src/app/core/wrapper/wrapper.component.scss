@@ -1,0 +1,13 @@
+.wrapper {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .content {
+    flex-grow: 1;
+    background-color: #fafafa;
+  }
+  app-footer {
+    flex-basis: 30px;
+  }
+}
