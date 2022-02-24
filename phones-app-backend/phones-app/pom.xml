@@ -39,8 +39,6 @@
 		    <version>3.36.0.3</version>
 		</dependency>
 		
-		
-		
 	</dependencies>
 
 	<build>
@@ -50,6 +48,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>phones-app-v1.1</finalName>
 	</build>
 
 </project>

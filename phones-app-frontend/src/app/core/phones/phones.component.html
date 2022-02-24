@@ -1,23 +1,25 @@
 <div class="container">
-  <mat-form-field appearance="fill" class="countryFilter">
-    <mat-label>Country</mat-label>
-    <mat-select [(value)]="code" (selectionChange)="updateFilter()">
-      <mat-option [value]="'All'"> All </mat-option>
-      <mat-option *ngFor="let country of countries" [value]="country.code">
-        {{ country.name }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div class="filters">
+    <h4>Filters</h4>
+    <mat-form-field appearance="standard" class="countryFilter">
+      <mat-label>Country</mat-label>
+      <mat-select [(value)]="code" (selectionChange)="updateFilter()">
+        <mat-option [value]="'All'"> All </mat-option>
+        <mat-option *ngFor="let country of countries" [value]="country.code">
+          {{ country.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>State</mat-label>
-    <mat-select [(value)]="state" (selectionChange)="updateFilter()">
-      <mat-option [value]="'All'"> All </mat-option>
-      <mat-option [value]="'VALID'"> Valid </mat-option>
-      <mat-option [value]="'INVALID'"> Invalid </mat-option>
-    </mat-select>
-  </mat-form-field>
-
+    <mat-form-field appearance="standard">
+      <mat-label>State</mat-label>
+      <mat-select [(value)]="state" (selectionChange)="updateFilter()">
+        <mat-option [value]="'All'"> All </mat-option>
+        <mat-option [value]="'VALID'"> Valid </mat-option>
+        <mat-option [value]="'INVALID'"> Invalid </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
       <!-- Country Column -->

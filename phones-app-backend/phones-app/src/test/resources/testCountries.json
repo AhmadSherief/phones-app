@@ -1,0 +1,32 @@
+[
+	{
+		"name":"Cameroon",
+		"code":"237",
+		"codeRegex":"\\(237\\)",
+		"validRegex":"\\(237\\)\\ ?[2368]\\d{7,8}$"
+	},
+	{
+		"name":"Ethiopia",
+		"code":"251",
+		"codeRegex":"\\(251\\)",
+		"validRegex":"\\(251\\)\\ ?[1-59]\\d{8}$"
+	},
+	{
+		"name":"Morocco",
+		"code":"212",
+		"codeRegex":"\\(212\\)",
+		"validRegex":"\\(212\\)\\ ?[5-9]\\d{8}$"
+	},
+	{
+		"name":"Mozambique",
+		"code":"258",
+		"codeRegex":"\\(258\\)",
+		"validRegex":"\\(258\\)\\ ?[28]\\d{7,8}$"
+	},
+	{
+		"name":"Uganda",
+		"code":"256",
+		"codeRegex":"\\(256\\)",
+		"validRegex":"\\(256\\)\\ ?\\d{9}$"
+	}
+]

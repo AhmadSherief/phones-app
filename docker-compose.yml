@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  phones-service:
+    image: phones-service-v1.1
+    container_name: phones-service
+    build: ./phones-app-backend/phones-app
+    restart: on-failure
+    env_file: ./.env
+    ports:
+      - $BE_DOCKER_PORT:$BE_APP_PORT
+    environment:
+      SPRING_APPLICATION_JSON: '{ "server.port" : "$BE_APP_PORT", "spring.datasource.url"  : "$DS_URL"}'
+
+  phones-client:
+    depends_on: 
+      - phones-service
+    image: phones-client-v1.1
+    container_name: phones-client
+    build: ./phones-app-frontend
+    ports:
+      - $FE_DOCKER_PORT:$FE_APP_PORT
